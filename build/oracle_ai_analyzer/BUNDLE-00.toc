@@ -1,0 +1,3 @@
+([('oracle_ai_analyzer',
+   '/Users/fabio/oracle_ai_app/dist/oracle_ai_analyzer',
+   'EXECUTABLE')],)
