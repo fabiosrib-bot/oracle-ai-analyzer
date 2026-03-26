@@ -1,0 +1,30 @@
+name: Build Windows EXE
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+
+    - name: Install dependencies
+      run: |
+        pip install pyinstaller
+        pip install oracledb
+
+    - name: Build EXE
+      run: pyinstaller --onefile --windowed oracle_ai_analyzer.py
+
+    - name: Upload EXE
+      uses: actions/upload-artifact@v4
+      with:
+        name: oracle-ai-analyzer
+        path: dist/oracle_ai_analyzer.exe
