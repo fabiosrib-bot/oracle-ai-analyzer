@@ -92,7 +92,6 @@ def connect_db():
             user=user,
             password=password,
             dsn=dsn,
-            mode=oracledb.SYSDBA
         )
 
         report = analyze_database(conn)
