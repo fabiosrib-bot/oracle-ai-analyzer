@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 import oracledb
 
+oracledb.init_oracle_client(lib_dir=r"C:\Oracle\ora112\instantclient")
 
 def analyze_database(conn):
 
