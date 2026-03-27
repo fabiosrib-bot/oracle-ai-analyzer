@@ -21,7 +21,7 @@ jobs:
         pip install oracledb
 
     - name: Build EXE
-      run: pyinstaller --onefile --windowed oracle_ai_analyzer.py
+      run: pyinstaller --onefile --windowed --hidden-import cryptography oracle_ai_analyzer.py
 
     - name: Upload EXE
       uses: actions/upload-artifact@v4
