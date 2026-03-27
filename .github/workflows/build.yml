@@ -17,7 +17,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install pyinstaller
+        pip install pyinstaller oracledb cryptography
         pip install oracledb
 
     - name: Build EXE
